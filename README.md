@@ -6,6 +6,7 @@
 
 #Topology
 This is a base network with a single FG, two upstream ports, and one LAN.
+```
 +-------------------------------------------------------------------+
 |                              VPC                                  |
 |                                                                   |
@@ -36,6 +37,7 @@ This is a base network with a single FG, two upstream ports, and one LAN.
 |                                                                   |
 |                                                                   |
 +-------------------------------------------------------------------+
+```
 
 #Setup Instructions
 
