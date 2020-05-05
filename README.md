@@ -1,11 +1,13 @@
-#--------------------------------------------------------------------------
-#Summary: Terraform Base with FG in AWS.
-#Version: Terraform v0.12.24 
-#         https://releases.hashicorp.com/terraform/0.12.24/
-#--------------------------------------------------------------------------
+**Summary**
+Terraform Base with FG in AWS.
 
-#Topology
+**Version**
+Terraform v0.12.24 
+https://releases.hashicorp.com/terraform/0.12.24/
+
+**Topology**
 This is a base network with a single FG, two upstream ports, and one LAN.
+
 ```
 +-------------------------------------------------------------------+
 |                              VPC                                  |
@@ -39,8 +41,7 @@ This is a base network with a single FG, two upstream ports, and one LAN.
 +-------------------------------------------------------------------+
 ```
 
-#Setup Instructions
-
+**Setup Instructions**
 1) In AWS create your Key-Pair.
 2) In AWS create an API user.
 3) Run:
