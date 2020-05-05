@@ -1,0 +1,19 @@
+module "fg_aws" {
+  source = "./modules/fg_aws"
+  aws_creds_file = var.aws_creds_file
+  tag_name_prefix = var.tag_name_prefix
+  region = var.region
+  aws_key_name = var.aws_key_name
+  availability_zone1 = var.availability_zone1
+  vpc_cidr_block = var.vpc_cidr_block
+  subnet1_block = var.subnet1_block
+  subnet1_ip_gw = var.subnet1_ip_gw
+  subnet1_ip_fg1 = var.subnet1_ip_fg1
+  subnet2_block = var.subnet2_block
+  subnet2_ip_gw = var.subnet2_ip_gw
+  subnet2_ip_fg1 = var.subnet2_ip_fg1
+  subnet3_block = var.subnet3_block
+  subnet3_ip_fg1 = var.subnet3_ip_fg1
+  fg1_license = var.fg1_license
+  instance_type = var.instance_type
+}
