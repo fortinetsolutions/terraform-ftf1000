@@ -13,4 +13,5 @@ variable "subnet2_ip_fg1" {}
 variable "subnet3_block" {}
 variable "subnet3_ip_fg1" {}
 variable "fg1_license" {}
-variable "instance_type" { }
+variable "instance_type" {}
+variable "sslpassword" {}

@@ -129,6 +129,7 @@ data "template_file" "fg1_userdata" {
     subnet1_ip_gw = var.subnet1_ip_gw
     subnet2_ip_gw = var.subnet2_ip_gw
     fg1_license = "${file(var.fg1_license)}"
+    sslpassword = var.sslpassword
   }
 }
 

@@ -16,4 +16,5 @@ module "fg_aws" {
   subnet3_ip_fg1 = var.subnet3_ip_fg1
   fg1_license = var.fg1_license
   instance_type = var.instance_type
+  sslpassword = var.sslpassword
 }

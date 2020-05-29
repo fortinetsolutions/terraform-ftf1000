@@ -46,3 +46,4 @@ variable "subnet3_ip_fg1" {
 }
 variable "fg1_license" { default = "licenses/fg1.lic" }
 variable "instance_type" { default = "c5.xlarge" }
+variable "sslpassword" { default= "fortinet123" }

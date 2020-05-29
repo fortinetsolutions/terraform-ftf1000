@@ -38,6 +38,44 @@ config router static
     set gateway ${subnet2_ip_gw}
   next
 end
+config user local
+ edit "sslvpnuser"
+                set type password
+                set passwd ${sslpassword}
+end
+config user group
+  edit "SSLVPNGroup"
+ 	set member "sslvpnuser"
+end
+config vpn ssl settings
+ set https-redirect enable
+ set servercert "self-sign"
+ set tunnel-ip-pools "SSLVPN_TUNNEL_ADDR1"
+ set tunnel-ipv6-pools "SSLVPN_TUNNEL_IPv6_ADDR1"
+ set port 443
+ set source-interface "port2"
+ set source-address "all"
+ set source-address6 "all"
+ set default-portal "tunnel-access"
+end
+config firewall policy
+ edit 1
+  set name "AllowSSLvpn"
+  set uuid e6f659bc-a0f7-51ea-1281-d462dbd5acca
+  set srcintf "ssl.root"
+  set dstintf "port3"
+  set srcaddr "SSLVPN_TUNNEL_ADDR1"
+  set dstaddr "all"
+  set action accept
+  set schedule "always"
+  set service "ALL"
+  set utm-status enable
+  set ssl-ssh-profile "certificate-inspection"
+  set av-profile "default"
+  set ips-sensor "default"
+  set groups "SSLVPNGroup"
+  set nat enable
+end
 
 --===============HEREDOC==
 Content-Type: text/plain; charset="us-ascii"
