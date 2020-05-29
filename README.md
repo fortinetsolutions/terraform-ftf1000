@@ -1,9 +1,9 @@
-#### ------------------------------------------------------------
+------------------------------------------------------------
 #### Summary: Terraform Base with FG in AWS.
 #### Version(s): 
 ##### Template 20200529
 ##### Terraform v0.12.24 (https://releases.hashicorp.com/terraform/0.12.24/)
-#### ------------------------------------------------------------
+------------------------------------------------------------
 
 #Topology
 This is a base network with a single FG, two upstream ports, and one LAN.
